@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Dom Element</h1>
+    <button onclick="Create_Element()">create dom element</button>
+    <script>
+        function Create_Element(){
+            let h1ref=document.createElement("h1")
+            h1ref.innerHTML="UI is created using javascript"
+            let body=document.body
+            body.appendChild(h1ref)
+        }
+    </script>
+</body>
+</html>
