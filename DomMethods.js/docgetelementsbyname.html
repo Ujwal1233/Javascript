@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>document.getElementsByName Demo</title>
+	<style>
+		body { font-family: Arial, sans-serif; padding: 20px; }
+		.result { margin-top: 12px; font-weight: 600; }
+	</style>
+</head>
+<body>
+	<h2>document.getElementsByName()</h2>
+
+	<p>Select your skills:</p>
+	<label><input type="checkbox" name="skill" value="HTML" /> HTML</label><br />
+	<label><input type="checkbox" name="skill" value="CSS" /> CSS</label><br />
+	<label><input type="checkbox" name="skill" value="JavaScript" /> JavaScript</label><br /><br />
+
+	<button onclick="showSelectedSkills()">Show Selected</button>
+
+	<div class="result" id="output"></div>
+
+	<script>
+		function showSelectedSkills() {
+			const skills = document.getElementsByName("skill");
+			const selected = [];
+
+			for (let i = 0; i < skills.length; i++) {
+				if (skills[i].checked) selected.push(skills[i].value);
+			}
+
+			document.getElementById("output").textContent =
+				selected.length ? "Selected: " + selected.join(", ") : "No skills selected.";
+		}
+	</script>
+</body>
+</html>

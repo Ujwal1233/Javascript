@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>document.getElementsByClassName Example</title>
+	<style>
+		.box {
+			padding: 10px;
+			margin: 6px 0;
+			border: 1px solid #aaa;
+			border-radius: 6px;
+		}
+		.highlight {
+			background-color: #fff3a3;
+			border-color: #f0c000;
+		}
+	</style>
+</head>
+<body>
+	<h2>document.getElementsByClassName()</h2>
+
+	<div class="box item">Item 1</div>
+	<div class="box item">Item 2</div>
+	<div class="box item">Item 3</div>
+
+	<button id="btn">Highlight All .item</button>
+
+	<script>
+		const btn = document.getElementById("btn");
+
+		btn.addEventListener("click", function () {
+			const elements = document.getElementsByClassName("item");
+
+			for (let i = 0; i < elements.length; i++) {
+				elements[i].classList.add("highlight");
+			}
+		});
+	</script>
+</body>
+</html>

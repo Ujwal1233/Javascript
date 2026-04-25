@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>document.querySelectorAll()</title>
+	<style>
+		body { font-family: Arial, sans-serif; padding: 20px; }
+		.item { padding: 8px; margin: 6px 0; border: 1px solid #ccc; }
+		.highlight { background: #fff3cd; border-color: #ffca2c; }
+	</style>
+</head>
+<body>
+	<h2>querySelectorAll() Example</h2>
+
+	<div class="item">Apple</div>
+	<div class="item special">Banana (special)</div>
+	<div class="item">Cherry</div>
+	<div class="item special">Mango (special)</div>
+
+	<button id="btn">Highlight .special</button>
+
+	<script>
+		const allItems = document.querySelectorAll('.item');
+		console.log('All .item elements:', allItems);
+
+		document.getElementById('btn').addEventListener('click', () => {
+			const specialItems = document.querySelectorAll('.item.special');
+			specialItems.forEach((el, index) => {
+				el.classList.add('highlight');
+				console.log(`Special item ${index + 1}:`, el.textContent.trim());
+			});
+		});
+	</script>
+</body>
+</html>

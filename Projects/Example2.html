@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       body{
+            background-color: lightgreen;
+        }
+        div{
+            margin: 100px auto;
+            box-shadow: 0px 0px 10px black;
+            padding: 50px;
+            text-align: center;
+            width: 500px;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+   <div>
+        <h2>Show/Hide Password</h2>
+        <input id="password" type="password" name="password">
+        <button id="btn" onclick="ShoworHidePassword()">Show password</button>
+    </div>
+   <script>
+function ShoworHidePassword(){
+let passwordref=document.getElementById('password')
+let btnref=document.getElementById('btn')
+if(passwordref.type==='password'){
+    passwordref.type="text"
+    btnref.innerHTML="Hide Password"
+}
+else{
+    passwordref.type="password"
+    btnref.innerHTML="Show Password"
+}
+}
+   </script>
+</body>
+</html>

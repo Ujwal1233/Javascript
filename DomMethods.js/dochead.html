@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>document.head() Example</title>
+</head>
+<body>
+	<h1>document.head() Demo</h1>
+	<p id="output"></p>
+
+	<script>
+		// Access the <head> element using document.head
+		const headElement = document.head;
+
+		// Show some details from the head element
+		document.getElementById("output").textContent =
+			`Head tag name: ${headElement.tagName}, child elements: ${headElement.children.length}`;
+
+		// Example: add a new meta tag into <head>
+		const meta = document.createElement("meta");
+		meta.name = "description";
+		meta.content = "This page demonstrates document.head usage.";
+		document.head.appendChild(meta);
+	</script>
+</body>
+</html>

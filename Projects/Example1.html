@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .conatiner{
+            text-align: center;
+            margin: 100px auto;
+        }
+        button{
+            padding: 5px 8px;
+            font-size: 15px;
+            margin: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+   <div class="conatiner">
+     <img src="https://www.liblogo.com/img-logo/re269re79-react-logo-react-logo-.png"
+    height="300px" width=" 300px" id="img"><br><br>
+    <button  onclick="ChangeToReact()">React</button>
+    <button  onclick="ChangeToAngular()">Angular</button>
+   </div>
+   <script>
+    function ChangeToAngular(){
+       let imgref= document.getElementById('img')
+       imgref.setAttribute('src','https://www.liblogo.com/img-logo/an271a55f-angular-logo-angular-logo-transparent-png-stickpng.png')
+    }
+    function ChangeToReact(){
+        let imgref= document.getElementById('img')
+        imgref.setAttribute('src','https://www.liblogo.com/img-logo/re269re79-react-logo-react-logo-.png')
+     }
+   </script>
+</body>
+</html>

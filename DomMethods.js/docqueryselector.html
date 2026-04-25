@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>document.querySelector() Example</title>
+	<style>
+		body { font-family: Arial, sans-serif; margin: 24px; }
+		.box { padding: 12px; border: 1px solid #ccc; border-radius: 8px; }
+		.highlight { background: #fff3cd; color: #7a5b00; }
+		button { margin-top: 12px; padding: 8px 12px; cursor: pointer; }
+	</style>
+</head>
+<body>
+	<h1>document.querySelector()</h1>
+
+	<div class="box" id="message">Click the button to change this text.</div>
+	<button id="changeBtn">Use querySelector</button>
+
+	<script>
+		// Select first element that matches the CSS selector
+		const messageBox = document.querySelector('#message');
+		const button = document.querySelector('#changeBtn');
+
+		button.addEventListener('click', function () {
+			messageBox.textContent = 'Selected with document.querySelector()';
+			messageBox.classList.add('highlight');
+		});
+	</script>
+</body>
+</html>

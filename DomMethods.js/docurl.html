@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>document.URL Demo</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			padding: 24px;
+		}
+		button {
+			padding: 10px 16px;
+			cursor: pointer;
+		}
+		#output {
+			margin-top: 16px;
+			padding: 12px;
+			background: #f4f4f4;
+			border: 1px solid #ddd;
+			word-break: break-all;
+		}
+	</style>
+</head>
+<body>
+	<h1>document.URL() Demo</h1>
+	<p>Click the button to display the current page URL.</p>
+	<button type="button" onclick="showURL()">Show URL</button>
+	<div id="output"></div>
+
+	<script>
+		function showURL() {
+			document.getElementById('output').textContent = document.URL;
+		}
+
+		// Show the URL on load as well
+		document.getElementById('output').textContent = document.URL;
+	</script>
+</body>
+</html>
