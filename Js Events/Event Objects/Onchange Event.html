@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>onchange Event </title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+      line-height: 1.6;
+    }
+    .box {
+      max-width: 520px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+    label {
+      display: block;
+      margin-top: 14px;
+      font-weight: bold;
+    }
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 6px;
+      box-sizing: border-box;
+    }
+    .inline {
+      display: flex;
+      gap: 16px;
+      margin-top: 8px;
+      flex-wrap: wrap;
+    }
+    .skills label,
+    .gender label {
+      font-weight: normal;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 0;
+    }
+    .result {
+      margin-top: 18px;
+      padding: 12px;
+      background: #c03f3f;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>onchange Event Demo</h2>
+
+    <label for="city">Select Karnataka City</label>
+    <select id="city" onchange="cityChanged()">
+      <option value="">-- Select City --</option>
+      <option>Bengaluru</option>
+      <option>Mysuru</option>
+      <option>Mangaluru</option>
+      <option>Hubballi</option>
+      <option>Belagavi</option>
+      <option>Davangere</option>
+      <option>Shivamogga</option>
+      <option>Ballari</option>
+    </select>
+
+    <label>Gender</label>
+    <div class="inline gender">
+      <label><input type="radio" name="gender" value="Male" onchange="genderChanged()" /> Male</label>
+      <label><input type="radio" name="gender" value="Female" onchange="genderChanged()" /> Female</label>
+      <label><input type="radio" name="gender" value="Other" onchange="genderChanged()" /> Other</label>
+    </div>
+
+    <label>Tech Skills</label>
+    <div class="inline skills">
+      <label><input type="checkbox" value="HTML" onchange="skillsChanged()" /> HTML</label>
+      <label><input type="checkbox" value="CSS" onchange="skillsChanged()" /> CSS</label>
+      <label><input type="checkbox" value="JavaScript" onchange="skillsChanged()" /> JavaScript</label>
+      <label><input type="checkbox" value="React" onchange="skillsChanged()" /> React</label>
+    </div>
+
+    <div class="result">
+      <p><strong>Selected City:</strong> <span id="selectedCity">None</span></p>
+      <p><strong>Selected Gender:</strong> <span id="selectedGender">None</span></p>
+      <p><strong>Selected Skills:</strong> <span id="selectedSkills">None</span></p>
+    </div>
+  </div>
+
+  <script>
+    function cityChanged() {
+      const city = document.getElementById('city').value;
+      document.getElementById('selectedCity').textContent = city || 'None';
+      if (city) alert('City changed to: ' + city);
+    }
+
+    function genderChanged() {
+      const selectedGender = document.querySelector('input[name="gender"]:checked');
+      const gender = selectedGender ? selectedGender.value : 'None';
+      document.getElementById('selectedGender').textContent = gender;
+      alert('Gender selected: ' + gender);
+    }
+
+    function skillsChanged() {
+      const checkedSkills = Array.from(document.querySelectorAll('.skills input:checked'))
+        .map(skill => skill.value);
+
+      document.getElementById('selectedSkills').textContent = checkedSkills.length ? checkedSkills.join(', ') : 'None';
+      alert('Skills selected: ' + (checkedSkills.length ? checkedSkills.join(', ') : 'None'));
+    }
+  </script>
+</body>
+</html>

@@ -4,11 +4,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        h3 {
+            color: #333;
+        }
+        p {
+            color: #555;
+            line-height: 1.6;
+        }
+        button{
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>My first page with javascript</h1>
     </header>
-    
+    <h3>user details</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipism ipsum dolor sit amet consectetur adipisicing elit. Libero sit, amet mm ipsum dolor sit amet consectetur adipisicing elit. Libero sit, amet mm ipsum dolor sit amet consectetur adipisicing elit. Libero sit, amet mm ipsum dolor sit amet consectetur adipisicing elit. Libero sit, amet mm ipsum dolor sit amet consectetur adipisicing elit. Libero sit, amet mm ipsum dolor sit amet consectetur adipisicing elit. Libero sit, amet mm ipsum dolor sit amet consectetur adipisicing elit. Libero sit, amet mm ipsum dolor sit amet consectetur adipisicing elit. Libero sit, amet mm ipsum dolor sit amet consectetur adipisicing elit. Libero sit, amet mm ipsum dolor sit amet consectetur adipisicing elit. Libero sit, amet mm ipsum dolor sit amet consectetur adipisicing elit. Libero sit, amet mm ipsum dolor sit amet consectetur adipisicing elit. Libero sit, amet mm ipsum dolor sit amet consectetur adipisicing elit. Libero sit, amet mm ipsum dolor sit amet consectetur adipisicing elit. Libero sit, amet mm ipsum dolor sit amet consectetur adipisicing elit. Libero sit, amet mm ipsum dolor sit amet consectetur adipisicing elit. Libero sit, amet mm ipsum dolor sit amet consectetur adipisicing elit. Libero sit, amet mm ipsum dolor sit amet consectetur adipisicing elit. Libero sit, amet mm ipsum dolor sit amet consectetur adipisicing elit. Libero sit, amet micing elit. Libero sit, amet molestiae suscipit saepe ratione placeat aspernatur voluptatem nulla ipsa magnam officiis rem sunt odit reprehenderit non! Voluptatibus, ad adipisci.</p>
+<button  onclick="getUserDetails()">Get user Details</button>
+<script>
+    function getUserDetails(){
+         let table=document.createElement('table') 
+         //table rows
+        let tr1=document.createElement('tr')
+        let tr2=document.createElement('tr')
+        let tr3=document.createElement('tr')
+        let tr4=document.createElement('tr')
+//   first row columns
+        let th1=document.createElement('th')
+        let th2=document.createElement('th')
+        let th3=document.createElement('th')
+//   second row columns
+        let td4=document.createElement('td')
+        let td5=document.createElement('td')
+        let td6=document.createElement('td')
+//   third row columns
+        let td7=document.createElement('td')
+        let td8=document.createElement('td')
+        let td9=document.createElement('td')
+//   fourth row columns
+        let td10=document.createElement('td')
+        let td11=document.createElement('td')
+        let td12=document.createElement('td')
+
+        //   first row data
+        th1.innerText="ID"
+        th2.innerText="Name"
+        th3.innerText="Email"
+        //   second row data
+        td4.innerText="101"
+        td5.innerText="John Doe"
+        td6.innerText="john.doe@example.com"
+        //   third row data
+        td7.innerText="102"
+        td8.innerText="Jane Smith"
+        td9.innerText="jane.smith@example.com"
+        //   fourth row data
+        td10.innerText="103"
+        td11.innerText="Bob Johnson"
+        td12.innerText="bob.johnson@example.com"
+
+        // Append columns to rows
+        tr1.appendChild(th1)
+        tr1.appendChild(th2)
+        tr1.appendChild(th3)
+        tr2.appendChild(td4)
+        tr2.appendChild(td5)
+        tr2.appendChild(td6)
+        tr3.appendChild(td7)
+        tr3.appendChild(td8)
+        tr3.appendChild(td9)
+        tr4.appendChild(td10)
+        tr4.appendChild(td11)
+        tr4.appendChild(td12)
+
+        // Append rows to table
+        table.appendChild(tr1)
+        table.appendChild(tr2)
+        table.appendChild(tr3)
+        table.appendChild(tr4)
+
+        // Append table to body
+        document.body.appendChild(table)
+  table.border="1"
+  table.style.textAlign="center"
+  table.style.margin="20px auto"
+    }
+</script>
 </body>
 </html>

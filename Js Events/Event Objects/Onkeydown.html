@@ -6,10 +6,12 @@
     <title>Document</title>
 </head>
 <body>
+    <input type="text" placeholder="enter text here"
+    onkeydown="KeyPress(event)">
     <script>
-        var h2ref=document.getElementById('three')
-        h2ref.innerHTML="<i>hello good morning</i>"
+        function KeyPress(event){
+            console.log("Key Pressed"+event.target.value)
+        }
     </script>
-    
 </body>
 </html>

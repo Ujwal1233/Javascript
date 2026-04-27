@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		div {
+			background-color: red;
+			height: 300px;
+			width: 300px;
+		}
+	</style>
+</head>
+<body>
+	<div onmouseover="MouseOver()" onmouseout="MouseOut()" id="one"></div>
+
+	<script>
+		function MouseOver() {
+			const divref = document.getElementById('one');
+			divref.style.backgroundColor = 'blue';
+			divref.style.borderRadius = '0';
+		}
+
+		function MouseOut() {
+			const divref = document.getElementById('one');
+			divref.style.backgroundColor = 'orange';
+			divref.style.borderRadius = '50%';
+		}
+	</script>
+</body>
+</html>
