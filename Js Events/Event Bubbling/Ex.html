@@ -1,0 +1,56 @@
+<!-- Event Bubbling
+
+<!-- *Event bubbling is a mechanism in JavaScript where an event starts from the deepest target element means the event trigger first on child element or clicked element and then moves upward to its paent elements.
+*in event bubbling event direction will be from child to parent.
+*we can stop event bubbling by using stopPropagation() method. -->
+
+<!-- -why does event bubbling happen?
+*javascript  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Bubbling</title>
+
+<style>
+#parent {
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#btn {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+</style>
+
+</head>
+<body>
+
+<h1>* Example for Event Bubbling</h1>
+
+<div id="parent">
+    <button id="btn">Click Me</button>
+</div>
+
+<script>
+document.getElementById('btn').addEventListener('click', (event) => {
+    alert("Child button clicked");
+
+    // stop bubbling here
+    event.stopPropagation();
+});
+
+document.getElementById('parent').addEventListener('click', () => {
+    alert("Parent clicked");
+});
+</script>
+
+</body>
+</html>
