@@ -1,0 +1,66 @@
+Event Capturing
+*The capturing phase is the first phase of event propagation,in the DOM
+*Event capturing means the event is triggered first of an outermost or parent element and then it goes to the innermost or child element.
+*To perform event capturing for the add event lisyener along with the event type and the callback function we have to pass a third argument as true
+
+syntax:
+       *element.addEventListener(event, callback, true) // true for event capture
+       *element.addEventListener(event, callback, false) // false for event bubbling
+       *element.addEventListener(event, callback) // by default it is false for event bubbling
+       
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #parent{
+        width: 200px;
+        height: 200px;
+        background-color: lightblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 5px solid goldenrod;
+        border-radius: 10px;
+
+    }
+    #btn{
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+    button{
+        height: 70px;
+        width: 90px;
+        cursor: pointer;
+        border: 5px solid goldenrod;
+        border-width: 2px;
+        border-radius: 10px;
+        background-color: rgb(255, 0, 255);
+        border-radius: 50%;
+    }
+</style>
+<body>
+    <h1>* Example for Event Capture</h1>
+
+    <div id="parent">
+        <button id="child">Click Me</button>
+    </div>
+
+
+    <script>
+        document.getElementById('parent').addEventListener('click',()=>{
+            alert("Parent Button Clicked")
+        }, true) // true for event capture
+
+        document.getElementById('child').addEventListener('click',()=>{
+            alert("Child Button Clicked")
+            event.stopPropagation() // to stop event bubbling
+        })
+    </script>
+</body>
+</html>
