@@ -1,0 +1,68 @@
+<!-- click event -->
+
+<button id="btn">click</button>
+<script>
+    let btnref = document.getElementById("btn");
+    btnref.addEventListener("click", function() {
+        alert("Button was clicked!");
+    });
+</script> <br><br><hr>
+
+<!-- onchange event -->
+
+<input type="text" id="txt" placeholder="Enter text">
+<script>
+    let txtref = document.getElementById("txt");
+    txtref.addEventListener("change", function() {
+        alert("Text was changed!");
+    });
+</script> <br><br><hr>
+
+<!-- onkeydown event -->
+
+<input type="text" id="keydownInput" placeholder="Press a key">
+<script>
+    let keydownInput = document.getElementById("keydownInput");
+    keydownInput.addEventListener("keydown", function() {
+        alert("Key was pressed!");
+    });
+</script> <br><br><hr>
+
+<!-- onsubmit event -->
+
+<form id="myForm">
+    <input type="text" placeholder="Enter your name" required>
+    <button type="submit">Submit</button>
+</form>
+<script>
+    let formRef = document.getElementById("myForm");
+    formRef.addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevents the default form submission
+        alert("Form was submitted!");
+    });
+</script> <br><br><hr>
+
+<!-- onfocus event -->
+
+<div class="container">
+        <h2>Registration Form</h2>
+        <form id="myForm">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input 
+                    type="text" 
+                    id="username"
+                    placeholder="Choose a unique username"
+                    minlength="3"
+                >   
+                <div class="focus-hint">Minimum 3 characters required</div>
+                <div class="help-text">This will be your unique identifier</div>
+            </div>
+        </form>
+</div>
+<script>
+    let usernameRef = document.getElementById("username");
+    usernameRef.addEventListener("focus", function() {
+        alert("Username field focused!");
+    });
+</script>
