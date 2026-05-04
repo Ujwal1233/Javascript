@@ -3,4 +3,4 @@ function greet(greeting,...names){
         console.log(`${greeting},${name}`)
     }
 }
-greet("hello","ujwal","chaluva","bharath","vishal","chandan","bharath")
+greet("hello","ujwal","chaluva","deepak","vishal","chandan","bharath")

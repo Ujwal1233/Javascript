@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main{
+            width: 600px;
+            height: 600px;
+            box-shadow: 0px 0px 10px black;
+            margin: 90px auto;
+            text-align: center;
+        }
+        #myform{
+               display: flex;
+               flex-direction: column;
+               padding: 15px;
+             align-items: center;
+        }
+        input{
+            height: 30px;
+            width: 60%;653.
+        }
+        label{
+            font-size: x-large;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <form id="myform"  onsubmit="validate()">
+            <label>First Name</label>
+            <input type="text" name="fname" placeholder="Enter First Name"
+            id="fname">
+            <br><br>
+            <label>Last Name</label>
+            <input type="text" name="lname" placeholder="Enter Last Name"
+            id="lname">
+            <br><br>
+            <label>Email</label>
+            <input type="email" name="lname" placeholder="Enter Your Email id"
+            id="email">
+            <br><br>
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Enter password"
+            id="password">
+            <br><br>
+            <label>Confirm Password</label>
+            <input type="password" name="cnfpassword" placeholder="Enter password" 
+            id="cnfpassword">
+            <br><br>
+            <input type="submit" >
+        </form>
+    </main>
+    <script>
+    
+
+                    function validate(){
+                           let fname = document.getElementById('fname').value;
+         let lname = document.getElementById('lname').value;
+            let email = document.getElementById('email').value;
+                let password = document.getElementById('password').value;
+                    let cnfpassword = document.getElementById('cnfpassword').value;
+if(fname === "" || lname === "" || email === "" || password === "" || cnfpassword === ""){
+                            alert("All fields are required")
+                        }
+                        else if(password != cnfpassword){
+                            alert("Password and confirm password should be same")
+                        }
+                        else{
+                            alert("Form submitted successfully")
+                        }
+                    }
+    </script>
+  
+</body>
+</html>

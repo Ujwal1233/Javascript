@@ -1,0 +1,32 @@
+<!-- 
+    To stop the setInterval() method, 
+    you can use the clearInterval() function. When you call setInterval(), 
+    it returns an interval ID that you can use to reference the specific interval you want to stop. 
+    You can then pass this interval ID to clearInterval() to stop the repeated execution of the callback function.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">        
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let sayHello=() => {
+            console.log('Hello, World!');
+        }
+        alert('Timer started');
+        let timerID = setInterval(sayHello, 3000);
+        console.log(timerID); // This will log the interval ID to the console
+        // To stop the interval after 10 seconds
+        setTimeout(() => {
+            clearInterval(timerID);
+            console.log('timer stopped');
+            alert('Timer stopped');
+        }, 10000);
+    </script>
+</body>
+</html>
