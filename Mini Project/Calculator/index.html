@@ -1,43 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculator</title>
-  <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
-  <main class="page">
-    <section class="calculator" aria-label="calculator">
-      <div class="display-row">
-        <input type="text" id="display" class="display" aria-label="calculator display" readonly>
-        <button class="btn action" data-action="clear" aria-label="clear">C</button>
-      </div>
-
-      <div class="grid">
-        <button class="btn" data-value="1">1</button>
-        <button class="btn" data-value="2">2</button>
-        <button class="btn" data-value="3">3</button>
-        <button class="btn operator" data-value="/">/</button>
-
-        <button class="btn" data-value="4">4</button>
-        <button class="btn" data-value="5">5</button>
-        <button class="btn" data-value="6">6</button>
-        <button class="btn operator" data-value="-">-</button>
-
-        <button class="btn" data-value="7">7</button>
-        <button class="btn" data-value="8">8</button>
-        <button class="btn" data-value="9">9</button>
-        <button class="btn operator" data-value="+">+</button>
-
-        <button class="btn" data-value=".">.</button>
-        <button class="btn" data-value="0">0</button>
-        <button class="btn equals" data-action="equals">=</button>
-        <button class="btn operator" data-value="*">*</button>
-      </div>
-    </section>
-  </main>
-
-  <script src="index.js"></script>
+    <table class="calculator">
+    <tr>
+       <td colspan="3"><input type="text" class="display-box" id="result" disabled></td>
+       <td><input type="button" value="C" id="btn" onclick="clearScreen()"></td> 
+    </tr>
+        <tr>
+            <td><input type="button" value="1" onclick="display('1')"></td>
+            <td><input type="button" value="2" onclick="display('2')"></td>
+            <td><input type="button" value="3" onclick="display('3')"></td>
+            <td><input type="button" value="/" onclick="display('/')"></td>
+        </tr>
+            <tr>
+                 <td><input type="button" value="4" onclick="display('4')"></td>
+            <td><input type="button" value="5" onclick="display('5')"></td>
+            <td><input type="button" value="6" onclick="display('6')"></td>
+            <td><input type="button" value="-" onclick="display('-')"></td>
+            </tr>
+                <tr> <td><input type="button" value="7" onclick="display('7')"></td>
+            <td><input type="button" value="8" onclick="display('8')"></td>
+            <td><input type="button" value="9" onclick="display('9')"></td>
+            <td><input type="button" value="*" onclick="display('*')"></td></tr>
+                    <tr>
+                         <td><input type="button" value="." onclick="display('.')"></td>
+            <td><input type="button" value="0" onclick="display('0')"></td>
+            <td><input type="button" value="=" id="btn" onclick="calculate()"></td>
+            <td><input type="button" value="+" onclick="display('+')"></td>
+                    </tr>
+    </table>
+    <script type="text/javascript" src="index.js"> </script>
 </body>
 </html>
