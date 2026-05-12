@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="display">
+            <input type="text" id="display" readonly>
+            <div class="history" id="history"></div>
+        </div>
+
+        <div class="buttons">
+            <button class="memory" onclick="memoryClear()">MC</button>
+            <button class="memory" onclick="memoryRecall()">MR</button>
+            <button class="memory" onclick="memoryStore()">MS</button>
+            <button class="memory" onclick="memoryAdd()">M+</button>
+
+            <button class="scientific" onclick="trigFunction('sin')">sin</button>
+            <button class="scientific" onclick="trigFunction('cos')">cos</button>
+            <button class="scientific" onclick="trigFunction('tan')">tan</button>
+            <button class="scientific" onclick="calculateFunction('log')">log</button>
+
+            <button class="scientific" onclick="trigFunction('asin')">sin⁻¹</button>
+            <button class="scientific" onclick="trigFunction('acos')">cos⁻¹</button>
+            <button class="scientific" onclick="trigFunction('atan')">tan⁻¹</button>
+            <button class="scientific" onclick="calculateFunction('ln')">ln</button>
+
+            <button class="constant" onclick="addToDisplay('π')">π</button>
+            <button class="constant" onclick="addToDisplay('e')">e</button>
+            <button class="scientific" onclick="calculateFunction('sqrt')">√</button>
+            <button class="scientific" onclick="calculateFunction('pow')">xʸ</button>
+
+            <button class="clear" onclick="clearDisplay()">C</button>
+            <button class="clear" onclick="deleteLast()">⌫</button>
+            <button class="operator" onclick="addToDisplay('(')">(</button>
+            <button class="operator" onclick="addToDisplay(')')">)</button>
+
+            <button class="number" onclick="addToDisplay('7')">7</button>
+            <button class="number" onclick="addToDisplay('8')">8</button>
+            <button class="number" onclick="addToDisplay('9')">9</button>
+            <button class="operator" onclick="addToDisplay('/')">÷</button>
+
+            <button class="number" onclick="addToDisplay('4')">4</button>
+            <button class="number" onclick="addToDisplay('5')">5</button>
+            <button class="number" onclick="addToDisplay('6')">6</button>
+            <button class="operator" onclick="addToDisplay('*')">×</button>
+
+            <button class="number" onclick="addToDisplay('1')">1</button>
+            <button class="number" onclick="addToDisplay('2')">2</button>
+            <button class="number" onclick="addToDisplay('3')">3</button>
+            <button class="operator" onclick="addToDisplay('-')">-</button>
+
+            <button class="number" onclick="addToDisplay('0')">0</button>
+            <button class="number" onclick="addToDisplay('.')">.</button>
+            <button class="equals" onclick="calculate()">=</button>
+            <button class="operator" onclick="addToDisplay('+')">+</button>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

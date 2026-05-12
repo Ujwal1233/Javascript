@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark & Light Mode Toggle</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🌙 Dark & Light Mode Toggle</h1>
+            <p>Experience seamless theme switching with smooth animations</p>
+
+            <div class="theme-toggle">
+                <input type="checkbox" id="theme-switch" class="theme-switch-checkbox">
+                <label for="theme-switch" class="theme-switch-label">
+                    <span class="theme-switch-slider">
+                        <span class="theme-switch-sun">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="5"></circle>
+                                <line x1="12" y1="1" x2="12" y2="3"></line>
+                                <line x1="12" y1="21" x2="12" y2="23"></line>
+                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                <line x1="1" y1="12" x2="3" y2="12"></line>
+                                <line x1="21" y1="12" x2="23" y2="12"></line>
+                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                            </svg>
+                        </span>
+                        <span class="theme-switch-moon">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                            </svg>
+                        </span>
+                    </span>
+                </label>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <section class="hero">
+                <div class="hero-content">
+                    <h2>Welcome to Theme Paradise</h2>
+                    <p>Toggle between light and dark modes to see the magic happen. Each theme is carefully crafted with attention to detail and user experience.</p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">2</span>
+                            <span class="stat-label">Themes</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">∞</span>
+                            <span class="stat-label">Possibilities</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Responsive</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="floating-shapes">
+                        <div class="shape shape-1"></div>
+                        <div class="shape shape-2"></div>
+                        <div class="shape shape-3"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="features">
+                <h2>Theme Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🎨</div>
+                        <h3>Smooth Transitions</h3>
+                        <p>Experience buttery smooth animations when switching between themes</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💾</div>
+                        <h3>Persistent Choice</h3>
+                        <p>Your theme preference is saved and remembered across sessions</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📱</div>
+                        <h3>Responsive Design</h3>
+                        <p>Perfect theme experience on all devices and screen sizes</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Performance Optimized</h3>
+                        <p>Lightweight implementation with no impact on page performance</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">♿</div>
+                        <h3>Accessibility First</h3>
+                        <p>Built with accessibility in mind for all users</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3>Easy Integration</h3>
+                        <p>Simple to implement and customize for any project</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="demo">
+                <h2>Interactive Demo</h2>
+                <div class="demo-content">
+                    <div class="demo-card">
+                        <h3>Sample Card</h3>
+                        <p>This is how content looks in different themes. The colors, shadows, and overall appearance adapt seamlessly.</p>
+                        <button class="demo-button">Action Button</button>
+                    </div>
+                    <div class="demo-card">
+                        <h3>Form Elements</h3>
+                        <input type="text" placeholder="Sample input field" class="demo-input">
+                        <textarea placeholder="Sample textarea" class="demo-textarea"></textarea>
+                        <select class="demo-select">
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                            <option>Option 3</option>
+                        </select>
+                    </div>
+                    <div class="demo-card">
+                        <h3>Interactive Elements</h3>
+                        <div class="demo-switches">
+                            <label class="demo-switch">
+                                <input type="checkbox" checked>
+                                <span class="demo-slider"></span>
+                            </label>
+                            <label class="demo-switch">
+                                <input type="checkbox">
+                                <span class="demo-slider"></span>
+                            </label>
+                        </div>
+                        <div class="progress-demo">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="code-preview">
+                <h2>How to Implement</h2>
+                <div class="code-container">
+                    <pre><code>// Basic theme toggle implementation
+const themeSwitch = document.getElementById('theme-switch');
+const body = document.body;
+
+themeSwitch.addEventListener('change', () => {
+    body.classList.toggle('dark-mode');
+    localStorage.setItem('theme', themeSwitch.checked ? 'dark' : 'light');
+});
+
+// Load saved theme
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
+    themeSwitch.checked = true;
+    body.classList.add('dark-mode');
+}</code></pre>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 Theme Toggle Demo. Built with ❤️ and CSS Variables.</p>
+        </footer>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

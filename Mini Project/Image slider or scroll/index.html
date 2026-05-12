@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slides">
+                <div class="slide active">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=500&fit=crop" alt="Mountain Landscape">
+                    <div class="slide-content">
+                        <h2>Mountain Adventure</h2>
+                        <p>Explore the breathtaking beauty of nature's wonders</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=800&h=500&fit=crop" alt="Ocean Waves">
+                    <div class="slide-content">
+                        <h2>Ocean Serenity</h2>
+                        <p>Find peace in the rhythmic waves of the sea</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=500&fit=crop" alt="Forest Path">
+                    <div class="slide-content">
+                        <h2>Forest Journey</h2>
+                        <p>Walk through the enchanted paths of ancient woods</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=500&fit=crop" alt="Desert Dunes">
+                    <div class="slide-content">
+                        <h2>Desert Dreams</h2>
+                        <p>Experience the vastness of golden sand dunes</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=800&h=500&fit=crop" alt="City Lights">
+                    <div class="slide-content">
+                        <h2>Urban Nights</h2>
+                        <p>Discover the magic of city lights at dusk</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="nav-btn prev-btn" aria-label="Previous slide">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+            <button class="nav-btn next-btn" aria-label="Next slide">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+
+            <div class="dots">
+                <button class="dot active" data-slide="0" aria-label="Go to slide 1"></button>
+                <button class="dot" data-slide="1" aria-label="Go to slide 2"></button>
+                <button class="dot" data-slide="2" aria-label="Go to slide 3"></button>
+                <button class="dot" data-slide="3" aria-label="Go to slide 4"></button>
+                <button class="dot" data-slide="4" aria-label="Go to slide 5"></button>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="control-btn play-btn" id="play-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                Play
+            </button>
+            <button class="control-btn pause-btn" id="pause-btn" style="display: none;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="6" y="4" width="4" height="16"></rect>
+                    <rect x="14" y="4" width="4" height="16"></rect>
+                </svg>
+                Pause
+            </button>
+            <div class="speed-control">
+                <label for="speed">Speed:</label>
+                <select id="speed">
+                    <option value="2000">Slow</option>
+                    <option value="1500" selected>Normal</option>
+                    <option value="1000">Fast</option>
+                    <option value="500">Very Fast</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
